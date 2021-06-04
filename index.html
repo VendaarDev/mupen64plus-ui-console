@@ -16,14 +16,14 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <a id="forkme_banner" href="https://github.com/jquesnelle/mupen64plus-ui-console/tree/emscripten">View on GitHub</a>
+          <a id="forkme_banner" href="https://github.com/VendaarDev/mupen64plus-ui-console/tree/emscripten">View on GitHub</a>
 
           <h1 id="project_title">mupen64plus via emscripten</h1>
           <h2 id="project_tagline">A port of the popular Nintendo 64 emulator for the web</h2>
 
             <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/jquesnelle/mupen64plus-ui-console/zipball/emscripten">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/jquesnelle/mupen64plus-ui-console/tarball/emscripten">Download this project as a tar.gz file</a>
+              <a class="zip_download_link" href="https://github.com/VendaarDev/mupen64plus-ui-console/zipball/emscripten">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/VendaarDev/mupen64plus-ui-console/tarball/emscripten">Download this project as a tar.gz file</a>
             </section>
         </header>
     </div>
@@ -35,9 +35,9 @@
 			Basic info
 		</h3>
 		<p>
-			This is a port of <a href="https://code.google.com/p/mupen64plus/">mupen64plus</a>, the popular Nintendo 64 emulator for the web. It uses <a href="https://github.com/kripken/emscripten">emscripten</a> 
-			to compile the C/C++ code of mupen64plus to <a href="http://asmjs.org/">asm.js</a>, a subset of Javascript meant to be highly optimizable. This port is currently very immature with lots of work left to 
-			be done; for example, gamepads, save states and customizable controls are not supported and there are also many graphical glitches in games. Furthermore, it requires <a href="http://www.mozilla.org/en-US/firefox/new/">Firefox</a>, although support for Chrome 
+			This is a fork of <a href="https://github.com/jquesnelle/mupen64plus-ui-console">mupen64plus via emscripten</a>, a Nintendo 64 emulator for the web. My goal is to make multiplayer for Mario Kart 64 possible, maybe other games in the future. For now there is now working multiplayer functionality, but you can play any N64 Rom you like alone. It uses <a href="https://github.com/kripken/emscripten">emscripten</a>
+			to compile the C/C++ code of mupen64plus to <a href="http://asmjs.org/">asm.js</a>, a subset of Javascript meant to be highly optimizable. This port is currently very immature with lots of work left to
+			be done; for example, gamepads, save states and customizable controls are not supported and there are also many graphical glitches in games. Furthermore, it requires <a href="http://www.mozilla.org/en-US/firefox/new/">Firefox</a>, although support for Chrome
 			should be coming soon.
 		</p>
 		<h3>
@@ -57,9 +57,10 @@
 			Play
 		</h3>
 		<p>
+      Upload a .n64 Rom to play!
 			<style>
 			  .emscripten { padding-right: 0; margin-left: auto; margin-right: auto; display: block; }
-			  div.emscripten { text-align: center; }      
+			  div.emscripten { text-align: center; }
 			  div.emscripten_border { border: 1px solid black; }
 			  /* the canvas *must not* have any border or padding, or mouse coords will be wrong */
 			  canvas.emscripten { border: 0px none; }
@@ -87,7 +88,7 @@
 				border-right: 5px solid rgb(235, 235, 235);
 				border-bottom: 5px solid rgb(235, 235, 235);
 				border-top: 5px solid rgb(120, 120, 120);
-				
+
 				border-radius: 100%;
 				background-color: rgb(189, 215, 46);
 			  }
@@ -161,7 +162,7 @@
 						Module['callMain'](['--resolution', '640x480', rom]);
 					};
 					reader.readAsArrayBuffer(files[0]);
-					
+
 				  }
 
 				  document.getElementById('files').addEventListener('change', handleFileSelect, false);
@@ -250,7 +251,7 @@
       </footer>
     </div>
 
-    
+
 
   </body>
 </html>
